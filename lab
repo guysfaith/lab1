@@ -27,6 +27,10 @@ while (fread(&data, sizeof(struct str), 1, f))
 /*while ((c = getc(f)) != EOF)
 printf("%c", c); */
 
+fseek(f,0,SEEK_END);
+int size = ftell(f);
+printf("size of the file: %d bytes", size);
+
 return 0;
 
 }
